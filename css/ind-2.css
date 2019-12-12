@@ -1,0 +1,382 @@
+header {
+    float: left;
+}
+
+body {
+    max-height: 1080px;
+    overflow: hidden;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1900px;
+    overflow: hidden;
+    position: relative;
+}
+
+#container {
+    float: left;
+    width: calc(100% - 100px);
+    min-width: 1180px;
+}
+
+.contents {
+    overflow: hidden;
+    width: 100%;
+    z-index: -100;
+}
+
+.carousel1,
+.carousel {
+    float: left;
+}
+
+.carousel1 {
+    width: 65%;
+    margin-top: 150px;
+    margin-left: 5%;
+}
+
+.m-text {
+    animation-duration: 4000ms;
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    right: 32%;
+    border: none;
+}
+
+.m-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.m-text span {
+    display: block;
+    color: white;
+    line-height: 2;
+    float: right;
+    font-size: 13px;
+    width: 320px;
+    height: 100px;
+    text-align: right;
+
+}
+
+.m-text li:last-child span {
+    font-style: italic;
+}
+
+
+.carousel {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-top: 150px;
+
+}
+
+#slide li span {
+    color: dimgray;
+    font-size: 13px;
+}
+
+#slide li img {
+    width: 250px;
+}
+
+aside {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+.headTop {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: dimgray;
+    z-index: -9999;
+    /*    height: 180px;*/
+}
+
+.headTop .mainText {
+    display: block;
+    position: absolute;
+}
+
+.headTop .mainText li:first-child img {
+    margin-top: 25px;
+    height: 300px;
+    animation-duration: 4500ms;
+    ;
+}
+
+.headTop .mainText li:last-child img {
+    top: 330px;
+    left: 26px;
+    height: 200px;
+    animation-duration: 3s;
+    position: absolute;
+}
+
+#line {
+    border-right: 2px solid grey;
+    width: 63px;
+    height: 550px;
+    top: 0;
+    left: 20%;
+    animation-duration: 5s;
+    display: block;
+    z-index: -9999px;
+}
+
+.search {
+    position: absolute;
+    width: 125px;
+    height: 40px;
+    background: rgba(255, 0, 0, 0);
+    right: 400px;
+    top: 20px;
+    z-index: 1;
+}
+
+.search > label {
+    position: absolute;
+    width: 100%;
+    top: 28px;
+    left: 20px;
+    border-bottom: 1px solid black;
+}
+
+.search #iSearch {
+    background: none;
+    border: none;
+    margin: 30px 0px;
+}
+
+
+.searchBtn {
+    position: absolute;
+    background: none;
+    display: block;
+    top: 22px;
+    left: 122px;
+
+}
+
+.searchBtn > img {
+    width: 18px;
+    height: 18px;
+}
+
+.cart,
+.login {
+    position: absolute;
+    z-index: 1;
+
+}
+
+.cart {
+    right: 10%;
+    top: 50px;
+
+}
+
+.login {
+    right: 15%;
+    top: 50px;
+}
+
+.logo a {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.bg {
+    /*height: 100vh;*/
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0px;
+    width: 190px;
+    z-index: 999;
+}
+
+/*#line2 {
+    z-index: -9999;
+    background: red;
+    position: absolute;
+    height: 550px;
+    right: 150px;
+    border: 1px solid grey;
+    bottom: 0px;
+    animation-duration: 3000ms;
+}*/
+
+#nav {
+    float: right;
+    position: absolute;
+    width: 130px;
+    /* height: 500px;*/
+    animation-duration: 5000ms;
+    right: 10px;
+    top: -610px;
+}
+
+#nav > li > a {
+    font-size: 26px;
+    font-family: 'ButlerRegular';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.4;
+    color: dimgray;
+    overflow: visible;
+    transition: 100ms;
+    position: relative;
+
+}
+
+
+#nav > li > a:hover {
+    color: transparent !important;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#nav > li:first-child > a:hover {
+    cursor: url(../images/icon1-1.png), auto;
+}
+
+#nav > li:nth-child(2) > a:hover {
+    cursor: url(../images/icon2-1.png), auto;
+}
+
+#nav > li:nth-child(3) > a:hover,
+#nav > li:nth-child(4) > a:hover {
+    cursor: url(../images/icon3-1.png), auto;
+}
+
+#nav > li:nth-child(5) > a:hover {
+    cursor: url(../images/icon4.png), auto;
+}
+
+#nav > li:last-child > a:hover,
+#nav > li:nth-child(6) > a:hover {
+    cursor: url(../images/logo-1.png), auto;
+}
+
+
+#nav > li:last-child > a > p {
+    color: crimson;
+    padding-top: 10px;
+    margin-bottom: -10px;
+}
+
+@media screen and (max-width:640px) {
+    body {
+        font-size: 13px;
+    }
+
+    header {
+        min-width: 100%;
+    }
+
+    .gnb {}
+
+    .icon {
+        display: block;
+    }
+
+    .headTop {
+        height: 13vw;
+        min-height: 60px;
+        position: relative;
+        background: red;
+
+    }
+
+    .carousel {
+        float: left;
+        background: aqua;
+    }
+
+    .carousel1 {
+        width: 100vh;
+        height: 10%;
+        padding-left: 10px;
+    }
+
+    .m-text {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+
+    .show {
+        z-index: 200;
+    }
+
+    .brand {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        /*    width: 120px;*/
+        font-family: 'ButlerRegular';
+        font-weight: normal;
+        font-style: italic;
+        font-size: 40px;
+        font-weight: 800;
+        transition: color 0.2s ease-in-out;
+        margin-top: 150px;
+    }
+
+    .brand:hover {
+        color: #ccc;
+    }
+
+    #sliding-navbar {
+        padding: 0 0px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        height: 100vh;
+        padding: 0 20px;
+        /*    width: 400px;*/
+        background: #333;
+        z-index: 300;
+        display: none;
+
+    }
+
+    .navbar--items {
+        list-style-type: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+    }
+
+    .navbar--item {
+        margin: 20px;
+        letter-spacing: 1px;
+        color: white;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    .navbar--item a {
+        color: white;
+    }
+
+    .navbar--item:hover a {
+        color: red;
+        opacity: 0.7;
+    }

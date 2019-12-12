@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>best</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .image {
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        header li img {
+            display: block;
+            z-index: 1000;
+        }
+
+        body .flip-clock-wrapper ul li a div div.inn,
+        body .flip-clock-small-wrapper ul li a div div.inn {
+            color: #CCCCCC;
+            background-color: #333333;
+        }
+
+        body .flip-clock-dot,
+        body .flip-clock-small-wrapper .flip-clock-dot {
+            background: #323434;
+        }
+
+        body .flip-clock-wrapper .flip-clock-meridium a,
+        body .flip-clock-small-wrapper .flip-clock-meridium a {
+            color: #323434;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swapimagesonhover.min.css">
+    <link rel="stylesheet" href="css/ind-be.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/flipclock.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/ind-1.js"></script>
+    <script src="js/flipclock.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script>
+        $(function() {
+            $("#slide3").bxSlider({
+                mode: 'fade',
+                minSlides: 1,
+                slideMargin: 10,
+                auto: true,
+                moveSlides: 1,
+                controls: false,
+                pager: false,
+                stopAutoOnclick: true,
+                speed: 500
+            });
+            $(function() {
+                FlipClock.Lang.Custom = {
+                    days: 'Days',
+                    hours: 'Hours',
+                    minutes: 'Minutes',
+                    seconds: 'Seconds'
+                };
+                var opts = {
+                    clockFace: 'DailyCounter',
+                    countdown: true,
+                    language: 'Custom'
+                };
+                var theday = new Date(2020, 00, 12);
+                /*달은 원하는 달보다 -1로, 1월은 00*/
+                var today = new Date()
+                console.log(theday - today)
+                var countdown = theday - today; // from: 11/21/2019 05:05 pm +0900
+                countdown = Math.max(1, countdown);
+                $('.clock-builder-output').FlipClock(countdown, opts);
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="headTop">
+            <div class="mainText">
+                <li><img src="images/logo-main.png" alt="" class="slideRight"></li>
+                <li><img src="images/logo-sub.png" alt="" class="slideRight"></li>
+
+            </div>
+            <p id="line" class="slideDown"></p>
+        </div>
+    </header>
+
+    <section id="container">
+        <h2 class="blind"></h2>
+
+        <div class="contTop">
+            <ul class="gnb">
+                <li>
+                    <form class="search">
+                        <label for="search">SEARCH</label>
+                        <input type="text" id="iSearch">
+                        <a href="#" class="searchBtn"><img src="images/iconmonstr-search-thin-48.png" alt=""></a>
+                    </form>
+                </li>
+                <li class="login">LOGIN<a href="#"></a></li>
+                <li class="cart"><a href="#">CART</a></li>
+            </ul>
+        </div>
+
+
+
+        <div class="contents">
+            <h2 class="fadeIn" id="best-text">
+                <p class="best">BEST ITEM</p><br>
+                <p class="best-below">LUCKY SALE</p>
+                <div class="clock-builder-output"></div>
+            </h2>
+
+            <div>
+                <div id="bestItem">
+                    <li class="best-mainText"></li>
+                    <li class="best1">
+                        <a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p>
+                            <img src="images/15s0.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">리브 참죽 원목 TV거실장 2000</span>
+                                <span class="b-texted">580,000won</span>
+                                <span class="b-text">349,000won </span>
+                            </div>
+
+                        </a>
+                    </li>
+
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/1560.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">KIKO DESIGN 컴패스 패브릭 4인 소파</span>
+                                <span class="b-texted">2,180,000won</span>
+                                <span class="b-text">1,962,000won</span>
+                            </div>
+
+                        </a></li>
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/1502270120699s0.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">앰버 패브릭 1인 소파</span>
+                                <span class="b-texted">460,000won </span>
+                                <span class="b-text">420,000won</span>
+                            </div>
+
+                        </a></li>
+                    <!--<li><a href="#"><img src="images/156352s0.jpg" alt=""></a></li>-->
+
+
+
+                    <!--<li><a href="#"><img src="images/150227012088m1.jpg" alt=""></a></li>-->
+
+
+                </div>
+                <ul id="bestItem2">
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart1"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/15.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">MANUFACT 프로젝트 원 1인 소파</span>
+                                <span class="b-texted">280,000won</span>
+                                <span class="b-text">249,000won </span>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart1"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/154.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">빌라르방 러스틱 스툴</span>
+                                <span class="b-texted">300,000won</span>
+                                <span class="b-text">269,000won </span>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart1"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/1570.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">iije 러블리 드레스룸 선반형 거울</span>
+                                <span class="b-texted">901,600won </span>
+                                <span class="b-text">920,000won </span>
+                            </div>
+                        </a></li>
+                    <li><a href="#">
+                            <p id="active" class="pulse"><a href="#"><img src="images/liked.png" alt=""></a></p>
+                            <p class="cart1"><a href="#"><img src="images/iconmonstr-product-4-24.png" alt=""></a></p><img src="images/1572589457176s0.jpg" alt="">
+                            <div class="best-text1">
+                                <span class="b-text">Yeh wall table</span>
+                                <span class="b-texted">196,500won </span>
+                                <span class="b-text">183,500won</span>
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <aside>
+        <p id="line2" class="slideUp"></p>
+        <div class="bg">
+
+
+            <nav>
+
+                <ul id="nav" class="slideLeft">
+                    <li>
+                        <a href="best.html">Best Item</a>
+                    </li>
+                    <li>
+                        <a href="ind-cha.html">Chair</a>
+                    </li>
+                    <li>
+                        <a href="ind-table.html">Table</a>
+                    </li>
+                    <li>
+                        <a href="ind-sofa.html">Sofa</a>
+                    </li>
+                    <li>
+                        <a href="ind-bed.html">Bed</a>
+                    </li>
+                    <li>
+                        <a href="ind-other.html">Other
+                            furniture</a>
+                    </li>
+                    <li>
+                        <a href="ind-collect.html">
+                            <p></p>
+                            <br>
+                            <p>LW</p>magazine
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+</body></html>

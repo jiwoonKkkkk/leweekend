@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>collection</title>
+
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/wickedcss.min.css">
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/swapimagesonhover.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Noto+Sans+KR&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/collection.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<!--    <script src="js/npm.js"></script>-->
+	<script src="js/TweenMax.min.js">
+	</script>
+	<script src="js/countdown-timer.min.js"></script>
+	<script src="js/ind-1.js"></script>
+	<script src="js/swapimagesonhover.min.js"></script>
+
+	<script>
+		$(function() {
+			$(".brown").click(function() {
+				$(".brown-small").stop().fadeIn(300);
+				$(".br-sofa").stop().fadeIn(300);
+			})
+			$(".black").click(function() {
+				$(".brown-small").stop().fadeOut(300);
+				$(".br-sofa").stop().fadeOut(300);
+			})
+
+			$(".icon").mouseover(function() {
+				$(this).css("transform", "rotate(-45deg)");
+			})
+			$(".icon").mouseout(function() {
+				$(this).css("transform", "rotate(45deg)");
+			})
+			//$(".close").mouseover(function() {
+			//$(this).css("transform", "rotate(-45deg)");
+			//})
+			//$(".close").mouseout(function() {
+			//$(this).css("transform", "rotate(45deg)");
+			//})
+
+			$(".like").click(function() {
+				$(this).toggleClass("on");
+			})
+
+
+			$('.icon').click(function() {
+				$('#sliding-navbar').fadeToggle(1000);
+				$('.left').toggleClass('show');
+				$('.left').removeClass('show');
+				//$(".close").css("display","block")
+				//$('.hamburger').toggleClass('menu-opened');
+			});
+			var count = 0;
+			$(".cart").click(function() {
+				count++;
+				$(".count").text(count);
+			})
+
+			$(".collect>li").on("mouseenter", function() {
+				$(this).stop().animate({
+					"width": 66 + "%"
+				}, 500).siblings().stop().animate({
+					"width": 16.5 + "%"
+				}, 500)
+
+			})
+			$(".collect>li").on("mouseleave", function() {
+				$(this).stop().animate({
+					"width": 33 + "%"
+				}, 500).siblings().stop().animate({
+					"width": 33.3333 + "%"
+				}, 500)
+                $("#below").css("display","block");
+
+			})
+
+
+
+
+
+		})
+
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="left">
+				<div class="fixed">
+
+				</div>
+				<p id="pick">LW Magazine</p>
+				<p id="m-line" class="fadeIn"></p>
+				<div class="mainText">
+					<div class="co1">
+
+						<p class="selected">"그들의 상상은 현실이 된다"</p>
+						<p class="sub-text">L'Object X Hass Brothers</p>
+						<p class="line"></p>
+
+						<span class="bottomText">
+							<i>'로브제'와 쌍둥이 아티스트 '하스 브라더스'의 합작품. </i><i>유니크하고도 사랑스러운 매력을 지닌 컬렉션</i> 잠들었던 동심과 호기심을 깨우는 세계로 초대합니다.</span><span class="tag">&#35;Unique</span>
+					</div>
+
+					<div class="co2">
+
+						<p class="selected">"더욱 차분하고 안정감있게"</p>
+						<p class="sub-text">Heritage White Walnut</p>
+						<p class="line"></p>
+
+						<span class="bottomText">
+							<i>자연 친화적 소재와 부드러운 헤드 디자인,</i><i>깊이감 있는 화이트 월넛과 앤틱한 활동 소재가 주는 멋.</i> <i>자연 그대로의, 느림이 주는 아름다움</i> </span><span class="tag">&#35;BASIC</span>
+					</div>
+					<div class="co3">
+
+						<p class="selected"><i>"그린슈머의 공간,</i><br> <i>친환경 인테리어"</i></p>
+						<p class="sub-text">Green + Consumer = Greensumer</p>
+						<p class="line"></p>
+
+						<span class="bottomText">
+							<i>친환경, 필환경 시대에 발 맞춰 우리 일상에서</i><i> 많은 변화와 다양한 실천이 이뤄지고 있는 요즘. </i><i>여기 르위켄에서 '그린슈머'의 공간을 소개합니다.</i></span>
+						<span class="tag">&#35;ECO-friendly</span>
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+		</header>
+
+		<section id="container">
+			<h2 class="blind"></h2>
+
+			<div class="contTop">
+				<ul class="gnb">
+					<li>
+						<form class="search">
+							<label for="search">SEARCH</label>
+							<input type="text" id="iSearch">
+							<!-- <a href="#" class="searchBtn"><img src="images/iconmonstr-search-thin-48.png" alt=""></a>-->
+						</form>
+					</li>
+					<li class="login"><a href="#">LOGIN</a></li>
+					<li class="cart-text"><a href="#">CART</a></li>
+				</ul>
+				<p class="icon"><a href="#"><img src="images/logo_w.png" alt=""></a></p>
+				<!--<li class="close"><a href="#"><img src="images/logo_w.png" alt=""></a></li>
+-->
+
+				<navbar id="sliding-navbar">
+					<a href="index.html" class="brand">Le<br> Weekend</a>
+					<ul class="navbar--items">
+						<li class="navbar--item"><a href="best.html">BEST ITEM</a></li>
+						<li class="navbar--item"><a href="ind-cha.html">CHAIR</a></li>
+						<li class="navbar--item"><a href="ind-table.html">TABLE</a></li>
+						<li class="navbar--item"><a href="ind-sofa.html">SOFA</a></li>
+						<li class="navbar--item"><a href="ind-bed.html">BED</a></li>
+						<li class="navbar--item"><a href="ind-other.html">OTHER FURNITURE</a></li>
+						<li class="navbar--item"><a href="ind-collect.html">LW Magazine</a></li>
+					</ul>
+				</navbar>
+			</div>
+
+			<section id="contents">
+
+				<ul class="center collect">
+					<li class="col1">
+						<div class="side">
+
+							<a href="#" class="view">VIEW
+							</a>
+						</div>
+					</li>
+					<li class="col2">
+						<div class="side">
+
+
+							<a href="#" class="view">VIEW</a>
+						</div>
+					</li>
+					<li class="col3">
+						<div class="side">
+							<!-- <h1>Versace Les Etolies</h1>-->
+
+							<a class="view">VIEW</a>
+						</div>
+
+					</li>
+				</ul>
+
+			</section>
+		</section>
+		<p id="below">▼Scroll</p>
+	</div>
+	<footer>
+	<div class="footTop">
+<!--
+		<div class="line1">
+			<li class="line1-left"></li>
+			<li class="line1-2"></li>
+			<li class="line1-right"></li>
+		</div>
+-->
+		<div class="topText">
+			<ul class="del">
+				<li class="num">01</li>
+				<li class="slideRight" id="title">safe delivery</li>
+				<li class="kor">안전하고 빠른 배송은 물론<br>설치도 걱정마세요!</li>
+			</ul>
+			<ul class="point">
+				<li class="num">02</li>
+				<li class="slideRight" id="title">special points</li>
+				<li class="kor">발송완료 즉시 결제금액의 2%를<br>포인트로 적립해드려요.</li>
+			</ul>
+			<ul class="cs">
+				<li class="num">03</li>
+				<li class="slideRight" id="title">personal CS</li>
+				<li class="kor">제품 및 배송에 대한 사항은<br> 1:1 상담서비스를 이용하세요.</li>
+			</ul>
+		</div>
+		<div class="footMiddle">
+			<p class="logo"><img src="images/footLogo.png" alt="footLogo"></p>
+		</div>
+		<div class="footBottom">
+			<div class="left">
+				<p>cs center.</p>
+				<p>02-541-7422<br>02-541-7421</p><br>
+				<p>Mon-Fri 10 - 18 pm.<br>Sat-Sun Close.</p>
+			</div>
+			<div class="middle">
+				<ul class="sns">
+					<li><a href="#"><img src="images/iconmonstr-instagram-14-48.png" alt=""></a></li>
+					<li><a href="#"><img src="images/iconmonstr-twitter-1-48.png" alt=""></a></li>
+					<li><a href="#"><img src="images/iconmonstr-facebook-4-48.png" alt=""></a></li>
+				</ul>
+				<ul class="m-bottom">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="#">이용약관</a></li>
+					<li><a href="#">이용안내</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+				</ul>
+			</div>
+			<div class="right">
+				<p>포지티브라이프컴퍼니(주) | 서울시 강남고 도산대로 53길 10 3층</p>
+				<p>103-86-00394 (대표자) 이관형</p>
+				<p>통신판매업신고번호 2016-서울강남-03103호</p>
+				<p>기업은행 063-080554-04-022 포지티브라이프컴퍼니(주)</p>
+				<p>입점/제휴문의: admin@leweekend.co.kr</p>
+				<p>업체견적문의: sale@leweekend.co.kr</p>
+				<p>세금계산서발행: tax@leweekend.co.kr</p>
+				<p> Copyright ⓒ www.leweekend.co.kr All right reserved.</p>
+			</div>
+		</div>
+	</div>
+	</footer>
+</body>
+
+</html>

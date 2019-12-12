@@ -1,0 +1,62 @@
+
+
+.more {
+    position: absolute;
+    top: 27%;
+    right: -1350px;
+    z-index: 9999;
+    display: none;
+    transition: 0.5s all ease;
+    width: 112%;
+}
+
+.color .red a{
+    background: #E30208;
+}
+
+.color .green a{
+    background: #006134;
+}
+
+.color .purple a{
+    background: #322B32;
+}
+
+.picss {
+    /*	position: absolute;*/
+    width: 0%;
+    z-index: 1;
+    height: 100%;
+}
+.small {
+	height: auto;
+	text-align: left;
+	margin-left: 15%;
+	margin-bottom: -37px;
+}
+.picss li {
+    float: left;
+}
+
+
+.middle {
+    /*margin-top: -280px;*/
+}
+
+
+.right{
+    position: absolute;
+    right: -10%;
+    top: 20%;
+    transition: 0.5s all ease;
+
+}
+.right img{
+    width: 90%;
+}
+.subText{
+    height: auto;
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}

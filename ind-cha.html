@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>chair</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .image {
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        header li img {
+            display: block;
+            z-index: 1000;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swapimagesonhover.min.css">
+    <link rel="stylesheet" href="css/ind-cha.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/countdown-timer.min.js"></script>
+    <script src="js/ind-1.js"></script>
+    <script>
+        $(function() {
+
+            $(".icon").mouseover(function() {
+                $(this).css("transform", "rotate(-45deg)");
+            })
+            $(".icon").mouseout(function() {
+                $(this).css("transform", "rotate(45deg)");
+            })
+            //$(".close").mouseover(function() {
+            //$(this).css("transform", "rotate(-45deg)");
+            //})
+            //$(".close").mouseout(function() {
+            //$(this).css("transform", "rotate(45deg)");
+            //})
+            $(function() {
+                $(".black").mouseenter(function() {
+                    $(".more").fadeIn(300);
+                })
+                $(".black").mouseleave(function() {
+                    $(".more").fadeOut(500);
+                })
+
+            })
+
+            $(function() {
+                $('.icon').click(function() {
+                    $('#sliding-navbar').fadeToggle(1000);
+                    $('.left').toggleClass('show')
+                    //$(".close").css("display","block")
+                    //$('.hamburger').toggleClass('menu-opened');
+                });
+
+                $('.icon').click(function() {
+                    //$('#sliding-navbar').fadeOut(500);
+                    $('.left').removeClass('show');
+                    //$('.hamburger').toggleClass('menu-opened');
+                })
+            });
+
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="left">
+                <div class="fixed">
+                    <p class="like"><a href="#"></a></p>
+                    <p class="cart"><a href="#"><img src="images/iconmonstr-product-4-32.png" alt=""></a><span class="count">0</span></p>
+                </div>
+                <div class="mainText">
+                    <h2>Fabric<br>Design<br>Egg Chair</h2>
+                    <p class="selected">Selected by LeWeekend</p>
+
+                    <p class="subText"><span>This product is referred to as 'selected furniture'.<br>Based on LeWeekend professional<br>selector's choice. Excellent domestic design furniture<br>compared to price.</span></p>
+                    <!--<p class="line"></p>-->
+                    <li><img src="images/black-ch.jpg" class="more" alt=""></li>
+                    <div class="stat">
+                        <ul class="color">
+
+                            <li class="black"><a href="#"></a></li>
+
+                            <li class="red"><a href="#"></a></li>
+                            <li class="purple"><a href="#"></a></li>
+                        </ul>
+
+                        <ul class="bottomText">
+                            <li>· 스틸 스테인레스</li>
+                            <li>· 패브릭</li>
+                            <li>· W770 x D730 x H160 mm</li>
+                            <li class="price">575,000 won</li>
+                        </ul>
+                    </div>
+                    <ul class="arrow">
+                        <li><a href="#"><img src="images/rightBtn.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/leftBtn.png" alt=""></a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </header>
+
+        <section id="container">
+            <h2 class="blind"></h2>
+
+            <div class="contTop">
+                <ul class="gnb">
+                    <li>
+                        <form class="search">
+                            <label for="search">SEARCH</label>
+                            <input type="text" id="iSearch">
+                            <!-- <a href="#" class="searchBtn"><img src="images/iconmonstr-search-thin-48.png" alt=""></a>-->
+                        </form>
+                    </li>
+                    <li class="login">LOGIN<a href="#"></a></li>
+                    <li class="cart"><a href="#">CART</a></li>
+                </ul>
+                <p class="icon"><a href="#"><img src="images/logo1.png" alt=""></a></p>
+                <!--<li class="close"><a href="#"><img src="images/logo_w.png" alt=""></a></li>
+-->
+
+                <navbar id="sliding-navbar">
+                    <a href="index.html" class="brand">Le<br> Weekend</a>
+                    <ul class="navbar--items">
+                        <li class="navbar--item"><a href="best.html">BEST ITEM</a></li>
+                        <li class="navbar--item"><a href="ind-cha.html">CHAIR</a></li>
+                        <li class="navbar--item"><a href="ind-table.html">TABLE</a></li>
+                        <li class="navbar--item"><a href="ind-sofa.html">SOFA</a></li>
+                        <li class="navbar--item"><a href="ind-bed.html">BED</a></li>
+                        <li class="navbar--item"><a href="ind-other.html">OTHER FURNITURE</a></li>
+                        <li class="navbar--item"><a href="ind-collect.html">LW Magazine</a></li>
+                    </ul>
+                </navbar>
+            </div>
+
+            <section id="contents">
+                <h2 class="blind"></h2>
+                <div class="picss">
+                    <li class="middle"><img src="images/chair.jpg" alt=""></li>
+                    <li class="right"><img src="images/46903e8edd063845.png" alt=""></li>
+                </div>
+                <!--<div class="hamburger-menu">
+                <div class="hamburger"></div>
+            </div>-->
+            </section>
+        </section>
+    </div>
+</body></html>

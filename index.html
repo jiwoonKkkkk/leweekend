@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .image {
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        header li img {
+            display: block;
+            z-index: 1000;
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swapimagesonhover.min.css">
+
+    <link rel="stylesheet" href="css/ind-2.css">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <!--
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
+-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/npm.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/swapimagesonhover.min.js"></script>
+    <script>
+        $(function() {
+            $("#slide").bxSlider({
+                mode: 'vertical',
+                minSlides: 3,
+                slideMargin: 10,
+                auto: true,
+                moveSlides: 1,
+                controls: false,
+                pager: false,
+                stopAutoOnclick: true,
+            });
+        })
+        $(function() {
+            $("#slide1").bxSlider({
+                mode: 'fade',
+                minSlides: 3,
+                slideMargin: 10,
+                auto: true,
+                moveSlides: 1,
+                controls: false,
+                pager: false,
+                stopAutoOnclick: true,
+                speed: 500
+            });
+        })
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="headTop">
+                <div class="mainText">
+                    <li><img src="images/logo-main.png" alt="" class="slideRight"></li>
+                    <li><img src="images/logo-sub.png" alt="" class="slideRight"></li>
+
+                </div>
+                <p id="line" class="slideDown"></p>
+            </div>
+        </header>
+        <section id="container">
+            <div class="contTop">
+                <ul class="gnb">
+                    <li>
+                        <form class="search">
+                            <label for="search">SEARCH</label>
+                            <input type="text" id="iSearch">
+                            <a href="#" class="searchBtn"><img src="images/iconmonstr-search-thin-48.png" alt=""></a>
+                        </form>
+                    </li>
+                    <li class="login">LOGIN<a href="#"></a></li>
+                    <li class="cart"><a href="#">CART</a></li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="carousel1">
+                    <ul id="slide1" class="fadeIn">
+                        <li class="1banner1"><a href="#"><img src="images/b7847485116135.5d71d12fdfb24.jpg" alt=""></a></li>
+                        <li class="1banner2"><a href="#"><img src="images/c0423b85116135.5d71d12fe1c38%20(2).jpg" alt=""></a></li>
+                        <li class="1banner3"><a href="#"><img src="images/afcf7785116135.5d71d12fe0ece.jpg" alt=""></a></li>
+                    </ul>
+                    <ul class="m-text">
+                        <h1>Blanos Curo Furniture 101</h1>
+                        <li>
+                            <span>온화함과 따뜻한 분위기를 전해주는 마호가니 원목.<br>
+                                동양적이면서도 차분한 감성의 '쿠로(Curo)' 시리즈<br>
+                                순수하고 완전한 가구를 만들어내는 #블라노스<br><br>
+                            </span></li>
+                        <li><span>by LeWeekend</span></li>
+                    </ul>
+                </div>
+                <!-- <h2 class="blind"></h2>
+        <p class="m"><img src="images/c0423b85116135.5d71d12fe1c38.jpg" alt="" class="fadeIn"></p>-->
+
+                <div class="carousel">
+                    <ul id="slide">
+                        <li class="banner1"><a href="#"><img src="images/1548403364384m0.jpg" alt=""><br><span>디럭스 100% 폴란드 친환경 구스이불솜 1000g</span></a></li>
+                        <li class="banner2"><a href="#"><img src="images/1562306393123i0.jpg" alt=""><br><span>[세레스홈]원목 크로스 사이드테이블 2 Size</span></a></li>
+                        <li class="banner3"><a href="#"><img src="images/1562662475430s0.jpg" alt=""><br><span></span><span>홀리스 와이체어 디자인 의자 </span></a></li>
+                        <li class="banner4"><a href="#"><img src="images/1570181343341i0.jpg" alt=""><br><span>[블라노스] BLANOS ROBE 화장대 01</span></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <aside>
+            <p class="icon" style="display: none"><a href="#"><img src="images/logo1.png" alt=""></a></p>
+            <p id="line2" class="slideUp"></p>
+            <div class="bg">
+                <nav>
+                    <ul id="nav" class="slideLeft">
+                        <li>
+                            <a href="best.html">Best Item</a>
+                        </li>
+                        <li>
+                            <a href="ind-cha.html">Chair</a>
+                        </li>
+                        <li>
+                            <a href="ind-table.html">Table</a>
+                        </li>
+                        <li>
+                            <a href="ind-sofa.html">Sofa</a>
+                        </li>
+                        <li>
+                            <a href="ind-bed.html">Bed</a>
+                        </li>
+                        <li>
+                            <a href="ind-other.html">Other
+                                furniture</a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <p></p>
+                                <br>
+                                <p>LW</p>magazine
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </aside>
+    </div>
+</body>
+
+</html>

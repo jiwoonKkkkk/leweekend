@@ -1,0 +1,249 @@
+.collect {
+    /*    padding-left: 130px;*/
+    font-family: sans-serif;
+    font-style: normal;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    box-sizing: border-box;
+}
+
+.collect > li {
+    float: left;
+    text-align: center;
+    width: 33.3333%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    /*	transition: all 0.5s ease-in-out;*/
+
+    /*    transition: all 0.5s ease-in-out;*/
+
+
+}
+
+.side {
+    padding-top: -100px;
+    /*	transform: scale(1);*/
+    /*	transition:0.5s;*/
+}
+
+
+.side p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.collect > li > .side {
+    padding-top: 300px;
+    box-sizing: border-box;
+    height: 1000px;
+    /*	background-position:center cnenter;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.collect > .col1 > .side {
+    background-image: url(../images/image1.jpg);
+}
+
+.collect > .col2 > .side {
+    background-image: url(../images/image2.jpg);
+}
+
+.collect > .col3 > .side {
+    background-image: url(../images/image2-2.jpg);
+}
+
+.collect > li:hover .view {
+    display: block;
+}
+
+/*
+.side:hover {
+	transform: scale(1.2);
+}
+*/
+
+.text {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.collect h1 {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    /*	display: none;*/
+}
+
+
+.view {
+    color: white;
+    border: 1px solid white;
+    opacity: 0.7;
+    font-size: 18px;
+    font-weight: bold;
+    display: none;
+    margin-top: 100px;
+    font-family: 'ButlerRegular';
+    /*	display: none;*/
+}
+
+.brand {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    /*    width: 120px;*/
+    font-family: 'ButlerRegular';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 800;
+    transition: color 0.2s ease-in-out;
+    margin-top: 150px;
+}
+
+.brand:hover {
+    color: #ccc;
+}
+
+.co2 {}
+
+
+
+.mainText {
+    /*	background: red;*/
+    position: relative;
+    text-align: right;
+}
+
+.mainText > div {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding-right: 40px;
+    box-sizing: border-box;
+    top: 200px;
+    display: none;
+}
+
+.selected {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.sub-text {
+    font-family: 'ButlerRegular';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 28px;
+    /*
+	border-bottom:1px solid dimgray;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+*/
+}
+
+#pick {
+    font-family: 'ButlerRegular';
+    font-weight: normal;
+    font-style: italic;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 400px;
+    color: rosybrown;
+    display: block;
+    position: absolute;
+    margin-left: 30px;
+
+}
+
+/*
+#m-line{
+    width: 1300px;
+    border: 1px solid brown;
+    transform: rotate(-60deg);
+    margin-left: -470px;
+      animation-duration: 7s;
+    opacity: 0.5;
+}
+*/
+
+
+#below {
+    font-size: 13px;
+    width: 20px;
+    height: 50px;
+    margin-left: 12%;
+    display: none;
+    transition: 0.5s all ease;
+    animation-duration: 3s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    from {
+        padding-top: 40%;
+        opacity: 0.3;
+    }
+
+    to {
+        padding-top: 42%;
+        font-size: 15px;
+        transition: 0.5s all ease;
+    }
+}
+
+.bottomText {
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    margin-top: 25px;
+    /*    margin-left: 100px;*/
+    /*    float: left;*/
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 15px;
+    /*background: green;*/
+}
+
+.bottomText i {
+    display: block;
+}
+
+/*
+.mainText>.co1,
+.mainText>.co3{
+	display: none;
+}
+*/
+
+
+.tag {
+    float: right;
+    /*    margin-left: 100px;*/
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+
+.side:hover .view {
+    display: block;
+}
+
+.side > li:hover #pick {
+    display: none;
+}
+
+@media screen and (max-width:1000px) {
+    .bottomText i {
+        display: inline;
+    }
+}
